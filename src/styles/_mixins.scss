@@ -3,3 +3,10 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin header-footer-base($color, $padding) {
+    @include flex-center;
+    justify-content: space-between;
+    background-color: $color;
+    padding: $padding;
+}

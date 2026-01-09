@@ -1,0 +1,18 @@
+.footer {
+    @include header-footer-base($color-background-secondary, $padding-header-footer);
+}
+
+.socials {
+    @include flex-center;
+    gap: $spacing-lg;
+}
+
+.icon {
+    color: $color-blue-primary;
+    width: $spacing-xl;
+    
+    &:hover {
+        color: $color-link-active-hover;
+    }
+}
+

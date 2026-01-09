@@ -1,13 +1,18 @@
 import type { FC } from "react";
-import styles from "./Headet.module.scss";
+import styles from "./Header.module.scss";
 
 import MyNavLink from "../MyNavLink/MyNavLink";
 
 const Header: FC = () => {
     return (
         <header className={styles.header}>
-            <MyNavLink to="/" title="Home" />
-            <MyNavLink to="/todo" title="Todo" />
+            <div className={styles.homePageLink}>
+                <MyNavLink to="/" title="Home" />
+            </div>
+            
+            <div className={styles.otherLinks}>
+                <MyNavLink to="/todo" title="Todo" />
+            </div>
         </header>
     )
 }

@@ -1,0 +1,3 @@
+.header {
+    @include header-footer-base($color-background-secondary, $padding-header-footer);
+}

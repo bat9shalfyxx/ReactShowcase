@@ -1,17 +1,22 @@
 .navLink {
+    color: $color-text-primary;
+    font-size: $font-size-lg;
     
-
     &:hover {
-
+        position: relative;
+        color: $color-link-hover;
     }
 
     &.active {
-
+        color: $color-link-active;
+        &:hover {
+            color: $color-link-active-hover;
+        }
     }
 }
 
 .icon {
-
+    
 }
 
 .title {

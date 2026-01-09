@@ -1,8 +1,16 @@
 @forward 'index';
 @import 'modern-normalize/modern-normalize.css';
+@import './reset.css';
+
+* {
+    &:hover, &:active {
+        transition: all 0.2s ease-in;
+    }
+}
 
 body {
-    background-color: $black-col;
+    font-size: $size-base;
+    background-color: $color-black;
 }
 
 .container {
@@ -11,5 +19,11 @@ body {
 }
 
 section {
-    background-color: $background-col;
+    @include flex-center;
+    background-color: $color-background-primary;
+    min-height: $viewport-height-full;
+    padding: $padding-section;
+
+    color: $color-text-primary;
+    font-size: $font-size-2xl;
 }
