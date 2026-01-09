@@ -1,6 +1,5 @@
 import type { FC } from "react";
-import { BrowserRouter } from "react-router";
-import { Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 import "./styles/style.scss";
 import Home from "./components/pages/Home/Home";
 import Header from "./components/Header/Header";
@@ -9,7 +8,7 @@ import Todo from "./components/pages/Todo/Todo";
 
 const App: FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="container">
         <Header />
         
@@ -20,7 +19,7 @@ const App: FC = () => {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

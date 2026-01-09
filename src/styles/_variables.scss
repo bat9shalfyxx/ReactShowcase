@@ -1,17 +1,18 @@
 // colors
 $color-black: #000 !default; 
 $color-white: #fff !default; 
+$color-gray: #545454;
 $color-blue-primary: #00FFFF;
 $color-blue-darked: #01c9c9;
 
-$color-background-primary: #1c1c1c  !default;
-$color-background-secondary: #111 !default;
+$color-background-primary: #0D1117  !default;
+$color-background-secondary: #010409 !default;
 
 $color-text-primary: #f5f5f5 !default;
 $color-text-secondary: #dcdcdc !default;
 
 
-$color-link-hover: #bebebe !default;
+$color-link-hover: #bdbdbd !default;
 $color-link-active: $color-blue-primary;
 $color-link-active-hover: $color-blue-darked;
 
@@ -48,6 +49,9 @@ $font-size-5xl: 3rem !default;      // 48px
 // padding
 $padding-section: $spacing-xl $spacing-2xl;
 $padding-header-footer: $spacing-xl $spacing-4xl $spacing-lg;
+
+// border
+$border-base: $spacing-xs solid $color-gray;
 
 // shadows
 $shadow-link-hover: 0 1px 1px 0 rgba(0, 0, 0, 0.5);

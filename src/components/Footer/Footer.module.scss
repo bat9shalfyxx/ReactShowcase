@@ -1,5 +1,6 @@
 .footer {
     @include header-footer-base($color-background-secondary, $padding-header-footer);
+    border-top: $border-base;
 }
 
 .socials {

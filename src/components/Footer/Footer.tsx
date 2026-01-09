@@ -9,7 +9,7 @@ const Footer: FC = () => {
                 <a href="https://github.com/bat9shalfyxx" target="blank">
                     <FaGithub className={`${styles.iconGithub} ${styles.icon}`}/>
                 </a>
-                <a href="https://web.telegram.org/a/#6057341851" target="blank">
+                <a href="https://t.me/@t1sh0k" target="blank">
                     <FaTelegramPlane className={`${styles.iconGithub} ${styles.icon}`}/>
                 </a>
             </div>

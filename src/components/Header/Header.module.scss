@@ -1,3 +1,4 @@
 .header {
     @include header-footer-base($color-background-secondary, $padding-header-footer);
+    border-bottom: $border-base;
 }
