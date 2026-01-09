@@ -1,0 +1,15 @@
+@forward 'index';
+@import 'modern-normalize/modern-normalize.css';
+
+body {
+    background-color: $black-col;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: $background-col;
+}
