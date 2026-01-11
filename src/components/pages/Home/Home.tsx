@@ -1,11 +1,15 @@
 import type { FC } from "react";
 import styles from './Home.module.scss';
+import PageTemplate from "../PageTemplate/PageTemplate";
 
 const Home: FC = () => {
     return (
-        <section className={styles.homePage}>
-            home
-        </section>
+        <PageTemplate>
+            <div className={styles.homePage}>
+                home <br />
+                will be soon...
+            </div>
+        </PageTemplate>
     )
 }
 

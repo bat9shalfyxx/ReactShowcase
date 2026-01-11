@@ -17,13 +17,3 @@ body {
     max-width: 1920px;
     margin: 0 auto;
 }
-
-section {
-    @include flex-center;
-    background-color: $color-background-primary;
-    min-height: $viewport-height-full;
-    padding: $padding-section;
-
-    color: $color-text-primary;
-    font-size: $font-size-2xl;
-}
