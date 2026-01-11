@@ -36,11 +36,9 @@ const Todo: FC = () => {
     return (
         <PageTemplate>
             <div className={styles.todoPage}>
-                todo <br />
-                will be soon...
-                {/* {todoList.map((todo: ITodo): React.ReactNode => {
-                    // return <span>{todo.title} <br /></span>
-                })} */}
+                {todoList.map((todo: ITodo): React.ReactNode => {
+                    return <span>{todo.title} <br /></span>
+                })}
             </div>
         </PageTemplate>
     )
