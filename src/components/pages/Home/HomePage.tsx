@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import styles from './Home.module.scss';
+import styles from './HomePage.module.scss';
 import PageTemplate from "../PageTemplate/PageTemplate";
 
-const Home: FC = () => {
+const HomePage: FC = () => {
     return (
         <PageTemplate>
             <div className={styles.homePage}>
@@ -13,4 +13,4 @@ const Home: FC = () => {
     )
 }
 
-export default Home;
+export default HomePage;
