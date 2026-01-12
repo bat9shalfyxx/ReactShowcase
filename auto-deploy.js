@@ -1,0 +1,39 @@
+import { exec } from "child_process";
+import { promisify } from "util";
+import readline from "readline";
+
+const execPromisify = promisify(exec);
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+const question = (query) => new Promise((resolve) => {
+    rl.question(query, resolve);
+});
+
+const autoDeployRun = async () => {
+    const message = await question("Input the text for commit: ");
+    const branch = await question("Input the name of branch: ");
+    const deployStatus = await question("Would you like to run deployment (Y/N): ");
+    
+    try {
+        await execPromisify("git add . ");
+        await execPromisify(`git commit -m "${message}"`);
+        await execPromisify(`git push origin ${branch}`);
+        
+        if(deployStatus && ["Y", "y"].includes(deployStatus.trim())) {
+            await execPromisify("npm run deploy");
+        } else {
+        }
+    } catch(error) {
+        console.log(error)
+    }
+};
+
+(async () => {
+    console.log(process.pid);
+    await autoDeployRun();
+    process.exit();
+})();

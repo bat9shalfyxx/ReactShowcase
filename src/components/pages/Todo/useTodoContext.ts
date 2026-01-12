@@ -1,6 +1,6 @@
 import { useContext, createContext } from "react";
 import type { Dispatch, SetStateAction } from "react";
-import type { ITodo } from "../../../types/api/todo";
+import type { ITodo } from "../../../types/todo";
 
 interface todoContext {
     todoList: ITodo[],

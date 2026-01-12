@@ -1,4 +1,4 @@
-import type { ITodo } from "../../../types/api/todo";
+import type { ITodo } from "../../../types/todo";
 import type { FC } from "react"; 
 import { useState } from "react";
 import styles from './TodoPage.module.scss';

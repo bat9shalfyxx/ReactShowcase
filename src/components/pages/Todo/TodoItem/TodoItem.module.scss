@@ -1,5 +1,9 @@
 .item {
     display: flex;
+    background-color: $color-background-secondary;
+    padding: $spacing-lg;
+    border-radius: $spacing-md;    
+    border: $spacing-xs solid $color-blue-darked;
 }
 
 .id {
