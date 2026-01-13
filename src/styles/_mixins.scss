@@ -10,3 +10,8 @@
     background-color: $color;
     padding: $padding;
 }
+
+@mixin set-opacity($opacity, $color) {
+  background-color: $color;
+  opacity: $opacity;
+}

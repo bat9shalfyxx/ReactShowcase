@@ -5,8 +5,8 @@ import type { ITodo } from "../../../types/todo";
 interface todoContext {
     todoList: ITodo[],
     setTodoList: Dispatch<SetStateAction<ITodo[]>>,
-    addTodo?: (todo: ITodo) => void,
-    removeTodo?: (todo: ITodo) => void
+    addTodoItem?: (event: MouseEvent) => void,
+    removeTodoItem?: (event: MouseEvent) => void
 }
 
 export const TodoContext = createContext<todoContext | null>(null);

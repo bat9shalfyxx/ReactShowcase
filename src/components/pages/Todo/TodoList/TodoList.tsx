@@ -12,11 +12,7 @@ const TodoList: FC = ( ) => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        axios.get<ITodo[]>('https://jsonplaceholder.typicode.com/todos', {
-            params: {
-                _limit: 7
-            }
-        })
+        axios.get<ITodo[]>('https://jsonplaceholder.typicode.com/todos?_limit=6')
             .then((res: AxiosResponse<ITodo[]>) => {
                 setTodoList(res.data);
             })
@@ -37,17 +33,17 @@ const TodoList: FC = ( ) => {
         return <span>Error: {error}</span>
     }
 
-  return (
-    <div className={styles.list}>
-      {todoList.map((todo: ITodo): React.ReactNode => {
-          return (
-              <div className={styles.todoList} key={todo.id}>
-                  <TodoItem id={todo.id} title={todo.title} />
-              </div>
-          )
-      })}
-    </div>
-  )
+    return (
+        <div className={styles.list}>
+            {todoList.map((todo: ITodo): React.ReactNode => {
+                return (
+                    <div className={styles.todoList} key={todo.id}>
+                        <TodoItem id={todo.id} title={todo.title} completed={todo.completed} />
+                    </div>
+                )
+            })}
+        </div>
+    )
 }
 
 export default TodoList;
