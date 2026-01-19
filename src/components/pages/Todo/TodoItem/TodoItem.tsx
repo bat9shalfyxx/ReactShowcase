@@ -13,8 +13,8 @@ const TodoItem: FC<ITodoItem> = ({ id, title, completed }) => {
   
   return (
     <div className={styles.item}>
-      <input type="text" className={styles.id} value={id} readOnly />
-      <input type="text" className={styles.title} value={title} readOnly />
+      <div className={styles.id}>{id}</div>
+      <div className={styles.title}>{title}</div>
       <input type="checkbox" checked={completed} />
       <input type="button" onClick={() => console.log(todoContext)} value="X" />
     </div>
