@@ -1,6 +1,6 @@
 .pageTemplate {
-    position: relative;
     @include flex-center;
+    position: relative;
     background-color: transparent;
     min-height: $viewport-height-full;
     padding: $padding-section;

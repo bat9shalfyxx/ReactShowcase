@@ -20,13 +20,13 @@ const autoDeployRun = async () => {
     
     try {
         await execPromisify("git add .");
-        console.log("All files have been added ✅.");
+        console.log("\nAll files have been added ✅\n");
 
         await execPromisify(`git commit -m "${message}"`);
-        console.log(`Changes successfully commited with message ${message} ✅.`);
+        console.log(`Changes successfully commited with message: "${message}" ✅\n`);
         
         await execPromisify(`git push origin ${branch}`);
-        console.log(`Successfully pushed to branch ${branch} ✅.`);
+        console.log(`Successfully pushed to branch "${branch}" ✅`);
         
         if(deployStatus && ["Y", "y"].includes(deployStatus.trim())) {
             await execPromisify("npm run deploy");

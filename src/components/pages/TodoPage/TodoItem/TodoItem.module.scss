@@ -1,0 +1,83 @@
+.item {
+    display: flex;
+    width: 50vw;
+    min-width: 300px;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-lg;
+    border-radius: $spacing-md;    
+    border: $spacing-xs solid $color-blue-darked;
+    transition: $transition-all-ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        border-color: lighten($color-blue-darked, 20%);
+        
+    }
+}
+
+
+.info {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    column-gap: $size-base;
+}
+
+.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    transition: $transition-all-ease;
+
+    &.completed {
+        text-decoration: line-through;
+        color: lighten(#000, 50%);
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    column-gap: $spacing-md;
+    margin-left: $spacing-xl;
+
+    
+    input[type="checkbox"] {
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+        accent-color: $color-blue-darked; // цвет галочки
+        transition: all 0.2s ease;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+button {
+    width: 1rem;
+    height: 1rem;
+    padding: 0.5rem;
+    background-color: $color-blue-darked;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: $spacing-sm;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+        background-color: $color-blue-darkest;
+        transform: scale(1.05);
+    }
+    
+    &:active {
+        transform: scale(0.95);
+    }
+}

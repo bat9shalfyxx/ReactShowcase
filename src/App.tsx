@@ -1,10 +1,10 @@
-import type { FC } from "react";
+import { type FC } from "react";
 import { HashRouter, Routes, Route } from "react-router";
 import "./styles/style.scss";
-import Home from "./components/pages/Home/HomePage";
+import Home from "./components/pages/HomePage/HomePage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Todo from "./components/pages/Todo/TodoPage";
+import Todo from "./components/pages/TodoPage/TodoPage";
 
 const App: FC = () => {
   return (
