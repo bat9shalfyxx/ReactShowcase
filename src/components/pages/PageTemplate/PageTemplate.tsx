@@ -17,11 +17,11 @@ const PageTemplate: FC<IPageTemplateProps> = ({ children }) => {
         speed={0.32}
         particleColors={["#00ffff"]}
         moveParticlesOnHover={false}
-        particleHoverFactor={0.5}
+        particleHoverFactor={0.1}
         alphaParticles={false}
-        particleBaseSize={35}
-        sizeRandomness={0.6}
-        cameraDistance={25}
+        particleBaseSize={27}
+        sizeRandomness={0.1}
+        cameraDistance={20}
         disableRotation
       />
     </main>
