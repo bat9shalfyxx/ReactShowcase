@@ -3,7 +3,7 @@ $color-black: #000 !default;
 $color-white: #fff !default; 
 $color-gray: #545454;
 $color-blue-primary: #00FFFF;
-$color-blue-darked: #03bbbb;
+$color-blue-darked: #02a7a7;
 $color-blue-darkest: #096d6d;
 
 $color-background-primary: #0a0a0f  !default;
@@ -51,7 +51,7 @@ $font-size-5xl: 3rem !default;      // 48px
 // padding
 $padding-section: $spacing-xl $spacing-2xl;
 $padding-header-footer: $spacing-xl $spacing-4xl $spacing-lg;
-
+    
 // border
 $border-base: $spacing-xs solid $color-gray;
 

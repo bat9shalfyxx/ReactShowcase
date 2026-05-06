@@ -22,7 +22,7 @@ const TodoItem: FC<ITodoItem> = ({ id, title, completed, index }) => {
 
       <div className={styles.actions}>
         <input type="checkbox" checked={completed} onChange={() => toggleFunc(id)}/>
-        <button onClick={() => removeFunc(id)}>X</button>
+        <button className={styles.btn} onClick={() => removeFunc(id)}>X</button>
       </div>
     </div>
   )

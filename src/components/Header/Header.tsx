@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import styles from "./Header.module.scss";
-import MyNavLink from "../MyNavLink/MyNavLink";
+import MyNavLink from "../UI/CustomNavLink/CustomNavLink";
 
 const Header: FC = () => {
     return (

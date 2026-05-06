@@ -1,14 +1,14 @@
 import type { FC } from "react";
 import { NavLink } from "react-router-dom";
-import styles from './MyNavLink.module.scss';
+import styles from './CustomNavLink.module.scss';
 
-interface IMyNavLink {
+interface ICustomNavLink {
     to: string,
     title: string,
     icon?: React.ReactNode
 }
 
-const MyNavLink: FC<IMyNavLink> = ( { to, title, icon } ) => {
+const CustomNavLink: FC<ICustomNavLink> = ( { to, title, icon } ) => {
     return (
         <NavLink
             to={to}
@@ -27,4 +27,4 @@ const MyNavLink: FC<IMyNavLink> = ( { to, title, icon } ) => {
     )
 }
 
-export default MyNavLink;
+export default CustomNavLink;
