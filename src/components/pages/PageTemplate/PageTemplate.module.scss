@@ -2,7 +2,8 @@
     @include flex-center;
     position: relative;
     background-color: transparent;
-    min-height: $viewport-height-full;
+    width: 100%;
+    min-height: $viewport-height-full - 15vh;
     padding: $padding-section;
 
     color: $color-text-primary;

@@ -1,6 +1,6 @@
 import { type FC, useState } from "react";
-import type { ITodo } from "../../../../shared/types/todoType";
-import { TodoContext } from "./useTodoContext";
+import type { ITodo } from "../../../types/todoType";
+import { TodoContext } from "../../../hooks/useTodoContext";
 import styles from './TodoPage.module.scss';
 import PageTemplate from "../PageTemplate/PageTemplate";
 import TodoList from "./TodoList/TodoList";

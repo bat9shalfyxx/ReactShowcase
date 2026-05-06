@@ -1,10 +1,9 @@
-import { type FC, useState, useEffect } from "react";
-import axios from "axios";
-import type { AxiosError, AxiosResponse } from "axios";
-import type { ITodo } from "../../../../../shared/types/todoType";
+import type { FC } from "react";
+import type { ITodo } from "../../../../types/todoType";
+import { useTodoContext } from "../../../../hooks/useTodoContext";
+import { useTodoFetch } from "../../../../hooks/useTodoFetch";
 import TodoItem from "../TodoItem/TodoItem";
 import styles from "./TodoList.module.scss";
-import { useTodoContext } from "../useTodoContext";
 
 const fakeTodoList: ITodo[] = [
     {
@@ -41,24 +40,10 @@ const fakeTodoList: ITodo[] = [
 
 const TodoList: FC = ( ) => {
     const { todoList, setTodoList } = useTodoContext();
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const { loading, error } = useTodoFetch(6);    
 
-    useEffect(() => {
-        axios.get<ITodo[]>('https://jsonplaceholder.typicode.com/todos?_limit=6')
-            .then((res: AxiosResponse<ITodo[]>) => {
-                setTodoList(res.data);
-            })
-            .catch((err: AxiosError) => {
-                setError(err.message);
-            })
-            .finally(() => {
-                setLoading(false);
-            })
-    }, [setTodoList]);
-        
     if (loading) {
-        return <span>Loading...</span>
+        return <span>Data is loading...</span>
     }
     
     if (error) {
