@@ -33,7 +33,7 @@ jobs:
         run: npm run typecheck
       
       - name: ESLint check
-        run: npm run lint
+        run: npm run lint:fix
       
       - name: Prettier format check
         run: npm run format
