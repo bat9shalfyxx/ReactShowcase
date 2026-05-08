@@ -1,6 +1,6 @@
-import type { FC } from "react";
-import styles from "./Header.module.scss";
-import MyNavLink from "../UI/CustomNavLink/CustomNavLink";
+import type { FC } from 'react';
+import styles from './Header.module.scss';
+import MyNavLink from '@/components/UI/CustomNavLink/CustomNavLink';
 
 const Header: FC = () => {
     return (
@@ -8,12 +8,12 @@ const Header: FC = () => {
             <div className={styles.homePageLink}>
                 <MyNavLink to="/" title="Home" />
             </div>
-            
+
             <div className={styles.otherLinks}>
                 <MyNavLink to="/todo" title="Todo" />
             </div>
         </header>
-    )
-}
+    );
+};
 
 export default Header;

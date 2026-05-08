@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
-import swc from "@vitejs/plugin-react-swc";
 import { ghPages } from 'vite-plugin-gh-pages';
 import path from 'path';
+import react from '@vitejs/plugin-react-swc';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    swc(),
+    react(),
     ghPages({
       branch: 'gh-pages',
       dotfiles: true

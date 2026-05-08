@@ -1,5 +1,5 @@
 import { useState, type FC, type FormEvent } from 'react';
-import CustomInput from '../../../UI/CustomInput/CustomInput';
+import CustomInput from '@/components/UI/CustomInput/CustomInput';
 import styles from './TodoCreateForm.module.scss';
 
 interface ITodoCreateForm {
@@ -12,26 +12,22 @@ const TodoCreateForm: FC<ITodoCreateForm> = ({ onCreateTodo }) => {
 
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-         
+
         onCreateTodo(title, description);
 
         setTitle('');
         setDescription(undefined);
-    }
+    };
 
     return (
-        <form className={styles.form} onSubmit={submitHandler}>  
+        <form className={styles.form} onSubmit={submitHandler}>
             <div className={styles.input_holder}>
-                <CustomInput
-                    placeholder="Название задачи"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                />
+                <CustomInput placeholder="Название задачи" value={title} onChange={e => setTitle(e.target.value)} />
 
-                <CustomInput 
+                <CustomInput
                     placeholder="Описание (необязательно)"
                     value={description}
-                    onChange={(e) => setDescription(e.target.value)}
+                    onChange={e => setDescription(e.target.value)}
                 />
             </div>
 
@@ -39,7 +35,7 @@ const TodoCreateForm: FC<ITodoCreateForm> = ({ onCreateTodo }) => {
                 Create
             </button>
         </form>
-    )
-}
+    );
+};
 
 export default TodoCreateForm;
