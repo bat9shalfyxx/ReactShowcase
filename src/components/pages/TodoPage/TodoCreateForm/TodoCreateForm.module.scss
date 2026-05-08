@@ -1,0 +1,77 @@
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: $spacing-lg auto;
+    padding: $spacing-lg;
+    background: $color-background-secondary;
+    border-radius: $spacing-md;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: $transition-all-ease;
+
+    &:focus-within {
+        box-shadow: 0 4px 12px rgba($color-blue-primary, 0.2);
+    }
+}
+
+.input_holder {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+}
+
+.btn {
+    width: 100%;
+    margin: 0 auto;
+    padding: $spacing-sm $spacing-lg;
+    background: $color-blue-darked;
+    color: $color-black;
+    border: none;
+    border-radius: $spacing-md;
+    font-size: $font-size-base;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $transition-all-ease;
+
+    &:hover {
+        background: $color-blue-darkest;
+        transform: translateY(-2px);
+        box-shadow: $shadow-link-hover;
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-blue-primary;
+        outline-offset: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form {
+        padding: $spacing-md;
+        max-width: 100%;
+    }
+
+    .input_holder {
+        gap: $spacing-sm;
+        margin-bottom: $spacing-lg;
+    }
+
+    .btn {
+        padding: $spacing-sm $spacing-md;
+        font-size: $font-size-sm;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        padding: $spacing-sm;
+    }
+
+    .btn {
+        padding: $spacing-xs $spacing-md;
+    }
+}

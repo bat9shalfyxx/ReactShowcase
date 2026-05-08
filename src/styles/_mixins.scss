@@ -1,7 +1,7 @@
 @mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin header-footer-base($color, $padding) {
@@ -12,6 +12,6 @@
 }
 
 @mixin set-opacity($opacity, $color) {
-  background-color: $color;
-  opacity: $opacity;
+    background-color: $color;
+    opacity: $opacity;
 }

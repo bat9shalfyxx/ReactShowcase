@@ -2,21 +2,21 @@
     display: flex;
     width: 50vw;
     min-width: 300px;
+    max-width: 1000px;
     background-color: transparent;
     justify-content: space-between;
     align-items: center;
     padding: $spacing-lg;
-    border-radius: $spacing-md;    
-    border: $spacing-xs solid $color-blue-darked;
+    border-radius: $spacing-md;
+    border: $spacing-xs solid $color-blue-darkest;
     transition: $transition-all-ease;
-    
+
     &:hover {
         transform: translateY(-2px);
         border-color: lighten($color-blue-darked, 20%);
-        
+        box-shadow: 0 4px 12px rgba($color-blue-primary, 0.2);
     }
 }
-
 
 .info {
     display: flex;
@@ -28,7 +28,7 @@
 .title {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; 
+    white-space: nowrap;
     transition: $transition-all-ease;
 
     &.completed {
@@ -43,21 +43,20 @@
     column-gap: $spacing-md;
     margin-left: $spacing-xl;
 
-    
-    input[type="checkbox"] {
+    input[type='checkbox'] {
         width: 1rem;
         height: 1rem;
         cursor: pointer;
         accent-color: $color-blue-darked; // цвет галочки
         transition: all 0.2s ease;
-        
+
         &:hover {
             transform: scale(1.1);
         }
     }
 }
 
-button {
+.btn {
     width: 1rem;
     height: 1rem;
     padding: 0.5rem;
@@ -71,12 +70,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     &:hover {
         background-color: $color-blue-darkest;
         transform: scale(1.05);
     }
-    
+
     &:active {
         transform: scale(0.95);
     }
