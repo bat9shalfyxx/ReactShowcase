@@ -1,9 +1,11 @@
 import { type FC } from 'react';
 import { HashRouter, Routes, Route } from 'react-router';
+
 import './styles/style.scss';
+import Footer from './components/layout/Footer/Footer';
+import Header from './components/layout/Header/Header';
 import Home from './components/pages/HomePage/HomePage';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import InfiniteScrollPage from './components/pages/InfiniteScrollPage/InfiniteScrollPage';
 import Todo from './components/pages/TodoPage/TodoPage';
 
 const App: FC = () => {
@@ -15,6 +17,7 @@ const App: FC = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/todo" element={<Todo />} />
+                    <Route path="/infinite-scroll" element={<InfiniteScrollPage />} />
                 </Routes>
 
                 <Footer />

@@ -1,5 +1,7 @@
 import { type FC } from 'react';
-import PageTemplate from '@/components/pages/PageTemplate/PageTemplate';
+
+import PageTemplate from '@/components/layout/PageTemplate/PageTemplate';
+
 import styles from './HomePage.module.scss';
 
 const HomePage: FC = () => {

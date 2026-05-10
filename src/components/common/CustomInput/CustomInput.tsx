@@ -1,4 +1,5 @@
 import type { FC, InputHTMLAttributes } from 'react';
+
 import styles from './CustomInput.module.scss';
 
 interface ICustomInputProps extends InputHTMLAttributes<HTMLInputElement> {

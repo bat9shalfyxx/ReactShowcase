@@ -1,34 +1,11 @@
-// .homePage {
-//     display: flex;
-//     align-items: center;
-//     // flex-wrap: wrap;
-//     gap: 2rem;
-// }
 
-// .avatar {
-//     border-radius: 50%;
-//     min-width: 200px;
-//     border: $border-base;
-// }
-
-// .main_info {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 1rem;
-//     margin: 1rem;
-// }
-
-// .about {
-//     max-width: 60vw;
-// }
-// HomePage.module.scss
 .homePage {
-    min-height: calc(100vh - 80px); // Учитываем высоту шапки
+    width: 100%;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 8rem;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -108,7 +85,6 @@
     }
 }
 
-// Новые стили для дополнительного контента
 .skills {
     display: flex;
     flex-wrap: wrap;

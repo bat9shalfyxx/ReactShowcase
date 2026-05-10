@@ -1,10 +1,12 @@
 import { type FC } from 'react';
-import { TodoContext } from '@/hooks/useTodoContext';
-import styles from './TodoPage.module.scss';
-import PageTemplate from '@/components/pages/PageTemplate/PageTemplate';
-import TodoList from './TodoList/TodoList';
-import TodoCreateForm from './TodoCreateForm/TodoCreateForm';
+
+import PageTemplate from '@/components/layout/PageTemplate/PageTemplate';
+import { TodoContext } from '@/context/useTodoContext';
 import { useTodo } from '@/hooks/useTodo';
+
+import TodoCreateForm from './TodoCreateForm/TodoCreateForm';
+import TodoList from './TodoList/TodoList';
+import styles from './TodoPage.module.scss';
 
 const TodoPage: FC = () => {
     const { todoList, setTodoList, toggleCompleted, removeTodoItem, createTodoItem } = useTodo();

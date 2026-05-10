@@ -1,4 +1,5 @@
 import React, { type FC } from 'react';
+
 import Particles from './bgAnimation/Particles';
 import styles from './PageTemplate.module.scss';
 

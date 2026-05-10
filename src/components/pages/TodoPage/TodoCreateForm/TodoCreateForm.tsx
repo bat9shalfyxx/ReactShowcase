@@ -1,5 +1,7 @@
 import { useState, type FC, type FormEvent } from 'react';
-import CustomInput from '@/components/UI/CustomInput/CustomInput';
+
+import CustomInput from '@/components/common/CustomInput/CustomInput';
+
 import styles from './TodoCreateForm.module.scss';
 
 interface ITodoCreateForm {

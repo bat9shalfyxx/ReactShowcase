@@ -24,13 +24,12 @@ jobs:
         uses: actions/setup-node@v6
         with: 
           node-version: ${{ matrix.node-version }}
-          # ⚠️ Меняем кэш с npm на pnpm
           cache: 'pnpm'
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9  # или latest, или конкретная версия 9.15.0
+          version: 9
           run_install: false
 
       - name: Get pnpm store directory
@@ -48,7 +47,6 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies (clearly)
-        # ⚠️ npm ci → pnpm install --frozen-lockfile
         run: pnpm install --frozen-lockfile
 
       - name: TypeScript type check

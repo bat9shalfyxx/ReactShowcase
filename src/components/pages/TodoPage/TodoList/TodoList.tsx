@@ -1,8 +1,10 @@
 import type { FC } from 'react';
-import type { ITodo } from '@/types/todoType';
-import { useTodoContext } from '@/hooks/useTodoContext';
-import { useTodoFetch } from '@/hooks/useTodoFetch';
+
 import TodoItem from '@/components/pages/TodoPage/TodoItem/TodoItem';
+import { useTodoContext } from '@/context/useTodoContext';
+import { useTodoFetch } from '@/hooks/useTodoFetch';
+import type { ITodo } from '@/types/todoType';
+
 import styles from './TodoList.module.scss';
 
 const fakeTodoList: ITodo[] = [
