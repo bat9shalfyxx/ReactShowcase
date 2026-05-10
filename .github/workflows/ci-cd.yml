@@ -3,9 +3,9 @@ run-name: ${{ github.actor }}'s CI/CD Pipeline is running
 
 on:
   push:
-    branches: [master, features]
+    branches: [master]
   pull_request: 
-    branches: [master, features]
+    branches: [master]
 
 jobs:
   quality:
