@@ -10,11 +10,15 @@ const InfiniteScrollPage: FC = () => {
     const scrollRef = useRef<HTMLDivElement | null>(null);
     const TOTAL_ITEMS = 1_000_000;
 
+    const estimateSize = useCallback(() => 35, []);
+    const getScrollElement = useCallback(() => scrollRef.current, []);
+    const measureElement = useCallback((el: HTMLElement) => el.getBoundingClientRect().height, []);
+
     const virtualizer = useVirtualizer({
         count: TOTAL_ITEMS,
-        estimateSize: useCallback(() => 35, []),
-        getScrollElement: useCallback(() => scrollRef.current, []),
-        measureElement: useCallback((el: HTMLElement) => el.getBoundingClientRect().height, []),
+        estimateSize,
+        getScrollElement,
+        measureElement,
         overscan: 7,
     });
 
