@@ -5,7 +5,7 @@ import styles from './VirtualListItem.module.scss';
 
 interface IVirtualItem {
     virtualItem: VirtualItem;
-    measureFunc: Virtualizer<HTMLDivElement, Element>['measureElement'];
+    measureFunc: Virtualizer<HTMLDivElement, HTMLElement>['measureElement'];
     children: ReactNode;
 }
 

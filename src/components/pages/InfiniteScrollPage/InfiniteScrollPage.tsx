@@ -1,5 +1,5 @@
 import { useVirtualizer } from '@tanstack/react-virtual';
-import { /*useMemo,*/ useRef, type FC } from 'react';
+import { /*useMemo,*/ useCallback, useRef, type FC } from 'react';
 
 import PageTemplate from '@/components/layout/PageTemplate/PageTemplate';
 
@@ -12,9 +12,9 @@ const InfiniteScrollPage: FC = () => {
 
     const virtualizer = useVirtualizer({
         count: TOTAL_ITEMS,
-        estimateSize: () => 35,
-        getScrollElement: () => scrollRef.current,
-        measureElement: el => el.getBoundingClientRect().height,
+        estimateSize: useCallback(() => 35, []),
+        getScrollElement: useCallback(() => scrollRef.current, []),
+        measureElement: useCallback((el: HTMLElement) => el.getBoundingClientRect().height, []),
         overscan: 7,
     });
 
