@@ -1,10 +1,30 @@
+.infiniteScrollPage {
+    @include flex-center;
+    flex-direction: column;
+    margin-block: 2rem;
+    
+    h1 {
+        margin-bottom: 0.4rem;
+    }
+}
+
+.header {
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    p {
+        color: $color-blue-darked;
+    }
+}
+
 .scrollbarHolder {
-    width: 60vw;
-    height: 75vh;
+    width: 50%;
+    height: 50vh;
     overflow: auto;
+    padding: 1rem,
 }
 
 .scrollbar {
     width: 100%;
-    position: relative;
 }

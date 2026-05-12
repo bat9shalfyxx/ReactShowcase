@@ -5,11 +5,12 @@ import styles from './PageTemplate.module.scss';
 
 interface IPageTemplateProps {
     children?: React.ReactNode;
+    className?: string;
 }
 
-const PageTemplate: FC<IPageTemplateProps> = ({ children }) => {
+const PageTemplate: FC<IPageTemplateProps> = ({ children, className }) => {
     return (
-        <main className={styles.pageTemplate}>
+        <main className={`${styles.pageTemplate} ${className || ''}`}>
             {children}
 
             <Particles
@@ -20,9 +21,9 @@ const PageTemplate: FC<IPageTemplateProps> = ({ children }) => {
                 moveParticlesOnHover={false}
                 particleHoverFactor={0.1}
                 alphaParticles={false}
-                particleBaseSize={27}
+                particleBaseSize={35}
                 sizeRandomness={0.3}
-                cameraDistance={30}
+                cameraDistance={25}
                 disableRotation
             />
         </main>

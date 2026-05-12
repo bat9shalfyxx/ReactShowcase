@@ -18,3 +18,17 @@ body {
     max-width: 1920px;
     margin: 0 auto;
 }
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #646cff, #9089fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+        text-align: center;
+    }
+}

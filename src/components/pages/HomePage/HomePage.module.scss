@@ -23,9 +23,10 @@
     gap: 1.5rem;
     flex: 1;
 
-    h1 {
+    h2 {
+        font-weight: bold;
         font-size: 2rem;
-        color: #333;
+        color: #5b5a5a;
         text-align: center;
 
         @media (max-width: 768px) {
@@ -56,20 +57,6 @@
 .about {
     flex: 1;
     max-width: 600px;
-
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(135deg, #646cff, #9089fc);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-
-        @media (max-width: 768px) {
-            font-size: 2rem;
-            text-align: center;
-        }
-    }
 
     p {
         font-size: 1.1rem;
