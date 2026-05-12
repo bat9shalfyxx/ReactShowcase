@@ -1,8 +1,9 @@
 import axios from 'axios';
 import type { AxiosError, AxiosResponse } from 'axios';
 import { useState, useEffect } from 'react';
+
+import { useTodoContext } from '@/context/useTodoContext';
 import type { ITodo } from '@/types/todoType';
-import { useTodoContext } from './useTodoContext';
 
 interface IUseTodoFetchReturn {
     loading: boolean;

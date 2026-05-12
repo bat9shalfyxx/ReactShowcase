@@ -1,3 +1,7 @@
 .todoPage {
+    width: 100%;
+    @include flex-center;
+    padding: 5vh 3vw;
+    flex-direction: column;
     font-size: $font-size-2xl;
 }

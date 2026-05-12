@@ -1,6 +1,8 @@
 import type { FC } from 'react';
+
+import MyNavLink from '@/components/common/CustomNavLink/CustomNavLink';
+
 import styles from './Header.module.scss';
-import MyNavLink from '@/components/UI/CustomNavLink/CustomNavLink';
 
 const Header: FC = () => {
     return (
@@ -11,6 +13,7 @@ const Header: FC = () => {
 
             <div className={styles.otherLinks}>
                 <MyNavLink to="/todo" title="Todo" />
+                <MyNavLink to="/infinite-scroll" title="InfiniteScroll" />
             </div>
         </header>
     );

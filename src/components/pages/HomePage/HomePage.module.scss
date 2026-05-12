@@ -1,34 +1,10 @@
-// .homePage {
-//     display: flex;
-//     align-items: center;
-//     // flex-wrap: wrap;
-//     gap: 2rem;
-// }
-
-// .avatar {
-//     border-radius: 50%;
-//     min-width: 200px;
-//     border: $border-base;
-// }
-
-// .main_info {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 1rem;
-//     margin: 1rem;
-// }
-
-// .about {
-//     max-width: 60vw;
-// }
-// HomePage.module.scss
 .homePage {
-    min-height: calc(100vh - 80px); // Учитываем высоту шапки
+    width: 100%;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 8rem;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -47,9 +23,10 @@
     gap: 1.5rem;
     flex: 1;
 
-    h1 {
+    h2 {
+        font-weight: bold;
         font-size: 2rem;
-        color: #333;
+        color: #5b5a5a;
         text-align: center;
 
         @media (max-width: 768px) {
@@ -81,20 +58,6 @@
     flex: 1;
     max-width: 600px;
 
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(135deg, #646cff, #9089fc);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-
-        @media (max-width: 768px) {
-            font-size: 2rem;
-            text-align: center;
-        }
-    }
-
     p {
         font-size: 1.1rem;
         line-height: 1.6;
@@ -108,7 +71,6 @@
     }
 }
 
-// Новые стили для дополнительного контента
 .skills {
     display: flex;
     flex-wrap: wrap;

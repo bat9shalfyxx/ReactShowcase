@@ -1,0 +1,26 @@
+.listEl {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-base;
+    color: $color-text-primary;
+    background-color: $color-background-secondary;
+    border-bottom: 1px solid rgba($color-blue-primary, 0.1);
+    transition: $transition-all-ease;
+
+    &:hover {
+        background-color: rgba($color-blue-primary, 0.05);
+    }
+
+    &:active {
+        background-color: rgba($color-blue-primary, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .listEl {
+        padding: $spacing-sm $spacing-md;
+        font-size: $font-size-sm;
+    }
+}

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import { FaGithub, FaTelegramPlane } from 'react-icons/fa';
+
 import styles from './Footer.module.scss';
 
 const Footer: FC = () => {

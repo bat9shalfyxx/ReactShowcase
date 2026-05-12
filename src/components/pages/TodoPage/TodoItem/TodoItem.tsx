@@ -1,6 +1,8 @@
 import { type FC } from 'react';
+
+import { useTodoContext } from '@/context/useTodoContext';
+
 import styles from './TodoItem.module.scss';
-import { useTodoContext } from '@/hooks/useTodoContext';
 
 interface ITodoItem {
     id: number;

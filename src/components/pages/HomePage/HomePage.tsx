@@ -1,5 +1,7 @@
 import { type FC } from 'react';
-import PageTemplate from '@/components/pages/PageTemplate/PageTemplate';
+
+import PageTemplate from '@/components/layout/PageTemplate/PageTemplate';
+
 import styles from './HomePage.module.scss';
 
 const HomePage: FC = () => {
@@ -18,7 +20,7 @@ const HomePage: FC = () => {
                             e.currentTarget.src = '@/../public/avatar.jpeg';
                         }}
                     />
-                    <h1>Goddo / bat9shalfyxx</h1>
+                    <h2>Goddo / bat9shalfyxx</h2>
 
                     <div className={styles.socialLinks}>
                         <a

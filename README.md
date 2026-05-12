@@ -11,25 +11,27 @@
 - Кастомные UI-компоненты (Input, Button и др.)
 
 ## Используемые технологии:
+
 ### Core
-- **React 19** (функциональные компоненты, хуки)
-- **TypeScript 5** (строгая типизация, собственные типы)
-- **React Router 7** (клиентская маршрутизация)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-### Стилизация
-- **SCSS** (модули, миксины, адаптив)
-- **Адаптивный дизайн** (mobile-first, `clamp()`)
+### Styling
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-### Стейт-менеджмент
-- **React Context API** (глобальное состояние списка todo)
-- **React Hooks** (`useState`, `useEffect`, `useCallback`, кастомные хуки)
+### State Management
+![React Context](https://img.shields.io/badge/Context_API-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Hooks](https://img.shields.io/badge/React_Hooks-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-### Инструменты
-- **Vite** (быстрая сборка)
-- **ESLint** (статический анализ)
+### Tools
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 
+___
 ## Мои наработки:
-Здесь я показал (или чему научился):
+Здесь я реаказал:
 | Техника | Где используется |
 |---------|------------------|
 | ✅ Кастомные хуки | `useTodoFetch` (вынос логики запросов) |
@@ -45,8 +47,8 @@
 - **Prettier** — автоматическое форматирование (единый стиль кода)
 
 ```bash
-npm run lint:fix #проверка (без исправлений)
-npm run lint #исправить код
+npm run lint #проверка (без исправлений)
+npm run lint:fix #исправить код
 
 npm run format:check #проверить форматирование
 npm run format #отформатировать

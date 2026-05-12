@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import { NavLink } from 'react-router-dom';
+
 import styles from './CustomNavLink.module.scss';
 
 interface ICustomNavLink {

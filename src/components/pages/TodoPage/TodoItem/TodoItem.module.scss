@@ -13,7 +13,7 @@
 
     &:hover {
         transform: translateY(-2px);
-        border-color: lighten($color-blue-darked, 20%);
+        border-color: scale($color-blue-darked, 20%);
         box-shadow: 0 4px 12px rgba($color-blue-primary, 0.2);
     }
 }
@@ -33,7 +33,7 @@
 
     &.completed {
         text-decoration: line-through;
-        color: lighten(#000, 50%);
+        color: scale(#000, 50%);
     }
 }
 
@@ -47,7 +47,7 @@
         width: 1rem;
         height: 1rem;
         cursor: pointer;
-        accent-color: $color-blue-darked; // цвет галочки
+        accent-color: $color-blue-darked;
         transition: all 0.2s ease;
 
         &:hover {
