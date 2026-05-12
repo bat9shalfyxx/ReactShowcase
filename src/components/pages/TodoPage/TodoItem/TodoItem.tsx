@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import { useTodoContext } from '@/context/useTodoContext';
+import { useTodoContext } from '@/hooks/useTodoContext';
 
 import styles from './TodoItem.module.scss';
 

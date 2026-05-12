@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { AxiosError, AxiosResponse } from 'axios';
 import { useState, useEffect } from 'react';
 
-import { useTodoContext } from '@/context/useTodoContext';
+import { useTodoContext } from '@/hooks/useTodoContext';
 import type { ITodo } from '@/types/todoType';
 
 interface IUseTodoFetchReturn {

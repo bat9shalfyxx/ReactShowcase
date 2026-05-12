@@ -1,7 +1,7 @@
 import { type FC } from 'react';
 
 import PageTemplate from '@/components/layout/PageTemplate/PageTemplate';
-import { TodoContext } from '@/context/useTodoContext';
+import { TodoContext } from '@/context/TodoContext';
 import { useTodo } from '@/hooks/useTodo';
 
 import TodoCreateForm from './TodoCreateForm/TodoCreateForm';

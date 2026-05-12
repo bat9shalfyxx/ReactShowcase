@@ -29,7 +29,7 @@ const autoDeployRun = async () => {
         console.log(`Successfully pushed to branch "${branch}" ✅`);
         
         if(deployStatus && ["Y", "y"].includes(deployStatus.trim())) {
-            await execPromisify("npm run deploy");
+            await execPromisify("pnpm deploy");
         }
     } catch(error) {
         console.log(`\n${error}`);

@@ -1,0 +1,251 @@
+.notFoundPage {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, $color-background-primary 0%, $color-background-secondary 100%);
+    position: relative;
+    overflow: hidden;
+    padding-block: 3rem;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: $spacing-xl;
+    text-align: center;
+    z-index: 2;
+}
+
+.errorCode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+    font-size: 0;
+}
+
+.digit {
+    font-size: 120px;
+    font-weight: 800;
+    background: linear-gradient(135deg, $color-blue-primary, mix(#fff, $color-blue-primary, 30%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba($color-blue-primary, 0.3);
+    animation: float 3s ease-in-out infinite;
+    
+    &:nth-child(1) {
+        animation-delay: 0s;
+    }
+    
+    &:nth-child(2) {
+        animation-delay: 0.15s;
+    }
+    
+    &:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: $color-text-primary;
+    margin-bottom: $spacing-lg;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: clamp(1rem, 3vw, 1.125rem);
+    color: $color-text-secondary;
+    margin-bottom: $spacing-2xl;
+    line-height: 1.6;
+}
+
+.reasons {
+    background: rgba($color-blue-primary, 0.05);
+    border-radius: $spacing-lg;
+    padding: $spacing-xl;
+    margin-bottom: $spacing-2xl;
+    text-align: left;
+    
+    p {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        margin-bottom: $spacing-md;
+        font-weight: 500;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+            padding: $spacing-xs 0;
+            color: $color-text-secondary;
+            font-size: $font-size-base;
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    gap: $spacing-lg;
+    justify-content: center;
+    margin-bottom: $spacing-3xl;
+    flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-base;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: $spacing-lg;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.primaryButton {
+    background: $color-blue-primary;
+    color: $color-background-primary;
+    
+    &:hover {
+        background: $color-blue-darked;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba($color-blue-primary, 0.3);
+    }
+}
+
+.secondaryButton {
+    background: transparent;
+    color: $color-text-primary;
+    border: 2px solid rgba($color-blue-primary, 0.3);
+    
+    &:hover {
+        border-color: $color-blue-primary;
+        background: rgba($color-blue-primary, 0.05);
+        transform: translateY(-2px);
+    }
+}
+
+.glitchBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+            0deg,
+            rgba($color-blue-primary, 0.03) 0px,
+            rgba($color-blue-primary, 0.03) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+        pointer-events: none;
+    }
+    
+    &::after {
+        transform: translateX(2px);
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: $spacing-3xl $spacing-lg;
+    }
+    
+    .digit {
+        font-size: 80px;
+    }
+    
+    .actions {
+        flex-direction: column;
+        gap: $spacing-md;
+    }
+    
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .reasons {
+        padding: $spacing-lg;
+    }
+    
+    .decorativeRocket {
+        font-size: 40px;
+        bottom: 5%;
+        left: 5%;
+    }
+    
+    .decorativeStar {
+        font-size: 30px;
+        top: 10%;
+        right: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .digit {
+        font-size: 60px;
+    }
+    
+    .title {
+        font-size: 1.75rem;
+    }
+    
+    .reasons ul li {
+        font-size: $font-size-sm;
+    }
+    
+    .searchBox {
+        flex-direction: column;
+        gap: $spacing-sm;
+    }
+    
+    .searchButton {
+        width: 100%;
+        padding: $spacing-sm $spacing-lg;
+    }
+}
