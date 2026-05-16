@@ -1,4 +1,4 @@
-import { useState, type FC, type FormEvent } from 'react';
+import { useState, memo, type FC, type FormEvent } from 'react';
 
 import CustomInput from '@/components/common/CustomInput/CustomInput';
 
@@ -40,4 +40,4 @@ const TodoCreateForm: FC<ITodoCreateForm> = ({ onCreateTodo }) => {
     );
 };
 
-export default TodoCreateForm;
+export default memo(TodoCreateForm);

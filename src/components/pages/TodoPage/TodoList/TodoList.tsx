@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { type FC, memo } from 'react';
 
 import TodoItem from '@/components/pages/TodoPage/TodoItem/TodoItem';
 import { useTodoContext } from '@/hooks/useTodoContext';
@@ -45,4 +45,4 @@ const TodoList: FC = () => {
     );
 };
 
-export default TodoList;
+export default memo(TodoList);

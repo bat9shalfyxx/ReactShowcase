@@ -1,5 +1,5 @@
 import { type VirtualItem, type Virtualizer } from '@tanstack/react-virtual';
-import type { FC, ReactNode } from 'react';
+import { type FC, type ReactNode, memo } from 'react';
 
 import styles from './VirtualListItem.module.scss';
 
@@ -28,4 +28,4 @@ const VirtualListItem: FC<IVirtualItem> = ({ virtualItem, measureFunc, children 
     );
 };
 
-export default VirtualListItem;
+export default memo(VirtualListItem);

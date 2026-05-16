@@ -1,5 +1,5 @@
 import { useVirtualizer } from '@tanstack/react-virtual';
-import { /*useMemo,*/ useCallback, useRef, type FC } from 'react';
+import { useMemo, useCallback, useRef, type FC } from 'react';
 
 import PageTemplate from '@/components/layout/PageTemplate/PageTemplate';
 
@@ -22,8 +22,8 @@ const InfiniteScrollPage: FC = () => {
         overscan: 7,
     });
 
-    // const virtualItems = useMemo(() => virtualizer.getVirtualItems(), [virtualizer]);
-    const virtualItems = virtualizer.getVirtualItems();
+    const virtualItems = useMemo(() => virtualizer.getVirtualItems(), [virtualizer]);
+    // const virtualItems = virtualizer.getVirtualItems();
 
     return (
         <PageTemplate className={styles.infiniteScrollPage}>
