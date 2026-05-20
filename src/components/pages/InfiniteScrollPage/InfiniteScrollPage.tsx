@@ -1,5 +1,5 @@
 import { useVirtualizer } from '@tanstack/react-virtual';
-import { /*useMemo,*/ useRef, type FC } from 'react';
+import { useMemo, useCallback, useRef, type FC } from 'react';
 
 import PageTemplate from '@/components/layout/PageTemplate/PageTemplate';
 
@@ -10,16 +10,20 @@ const InfiniteScrollPage: FC = () => {
     const scrollRef = useRef<HTMLDivElement | null>(null);
     const TOTAL_ITEMS = 1_000_000;
 
+    const estimateSize = useCallback(() => 35, []);
+    const getScrollElement = useCallback(() => scrollRef.current, []);
+    const measureElement = useCallback((el: HTMLElement) => el.getBoundingClientRect().height, []);
+
     const virtualizer = useVirtualizer({
         count: TOTAL_ITEMS,
-        estimateSize: () => 35,
-        getScrollElement: () => scrollRef.current,
-        measureElement: el => el.getBoundingClientRect().height,
+        estimateSize,
+        getScrollElement,
+        measureElement,
         overscan: 7,
     });
 
-    // const virtualItems = useMemo(() => virtualizer.getVirtualItems(), [virtualizer]);
-    const virtualItems = virtualizer.getVirtualItems();
+    const virtualItems = useMemo(() => virtualizer.getVirtualItems(), [virtualizer]);
+    // const virtualItems = virtualizer.getVirtualItems();
 
     return (
         <PageTemplate className={styles.infiniteScrollPage}>

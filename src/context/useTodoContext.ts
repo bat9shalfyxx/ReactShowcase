@@ -10,10 +10,6 @@ interface ITodoContext {
     toggleCompleted: (id: string) => void;
 }
 
-export type removeTodoItem = (id: string) => void;
-export type createTodoItem = (title: string, description: string | undefined) => void;
-export type toggleCompleted = (id: string) => void;
-
 export const TodoContext = createContext<ITodoContext | null>(null);
 
 export const useTodoContext = () => {

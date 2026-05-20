@@ -1,5 +1,6 @@
 import { memo, type Dispatch, type FC, type SetStateAction } from 'react';
 
+import Loader from '@/components/common/Loader/Loader';
 import TodoItem from '@/components/pages/TodoPage/TodoItem/TodoItem';
 import { useTodoFetch } from '@/hooks/useTodoFetch';
 import type { ITodo } from '@/types/todo.type';
@@ -18,7 +19,7 @@ const TodoList: FC<ITodoListProps> = ({ todoList, setTodoList }) => {
     if (loading) {
         return (
             <div className={styles.listContainer}>
-                <span>Data is loading...</span>
+                <Loader />
             </div>
         );
     }

@@ -28,6 +28,7 @@ const HomePage: FC = () => {
                         src="https://github.com/bat9shalfyxx.png"
                         alt="Goddo / bat9shalfyxx avatar"
                         loading="lazy"
+                        fetchPriority="high"
                         onError={e => {
                             e.currentTarget.src = '@/../public/avatar.jpeg';
                         }}
