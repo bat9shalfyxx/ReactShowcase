@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 .pnpm-store
-knip.json
 
 # Editor directories and files
 .vscode/*
