@@ -1,14 +1,18 @@
 import { type Dispatch, type SetStateAction, useContext, createContext } from 'react';
 
-import type { ITodo } from '@/types/todoType';
+import type { ITodo } from '@/types/todo.type';
 
 interface ITodoContext {
     todoList: ITodo[];
     setTodoList: Dispatch<SetStateAction<ITodo[]>>;
-    removeTodoItem: (id: number) => void;
-    addTodoItem?: (event: MouseEvent) => void;
-    toggleCompleted: (id: number) => void;
+    removeTodoItem: (id: string) => void;
+    createTodoItem: (title: string, description: string | undefined) => void;
+    toggleCompleted: (id: string) => void;
 }
+
+export type removeTodoItem = (id: string) => void;
+export type createTodoItem = (title: string, description: string | undefined) => void;
+export type toggleCompleted = (id: string) => void;
 
 export const TodoContext = createContext<ITodoContext | null>(null);
 

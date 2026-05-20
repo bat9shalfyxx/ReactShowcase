@@ -5,7 +5,19 @@ import PageTemplate from '@/components/layout/PageTemplate/PageTemplate';
 import styles from './HomePage.module.scss';
 
 const HomePage: FC = () => {
-    const skills = ['React', 'TypeScript', 'Node.js', 'Zustand', 'Jest', 'Tailwind', 'Vite'];
+    const skills = [
+        'React',
+        'JavaScript',
+        'TypeScript',
+        'Node.js',
+        'Zustand',
+        'Jest',
+        'CI/CD',
+        'Git',
+        'Python',
+        'Django',
+        'Linux',
+    ];
 
     return (
         <PageTemplate>
@@ -32,7 +44,7 @@ const HomePage: FC = () => {
                             GitHub
                         </a>
                         <a
-                            href="https://chapayevsk.hh.ru/resume/3a308a9aff0ec34f780039ed1f486d59754e4d"
+                            href="https://hh.ru/resume/3a308a9aff0ec34f780039ed1f486d59754e4d"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.socialLink}

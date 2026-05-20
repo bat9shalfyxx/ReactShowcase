@@ -1,10 +1,9 @@
-import React, { type FC } from 'react';
+import { memo, type FC, type PropsWithChildren } from 'react';
 
 import Particles from './bgAnimation/Particles';
 import styles from './PageTemplate.module.scss';
 
-interface IPageTemplateProps {
-    children?: React.ReactNode;
+interface IPageTemplateProps extends PropsWithChildren {
     className?: string;
 }
 
@@ -30,4 +29,4 @@ const PageTemplate: FC<IPageTemplateProps> = ({ children, className }) => {
     );
 };
 
-export default PageTemplate;
+export default memo(PageTemplate);

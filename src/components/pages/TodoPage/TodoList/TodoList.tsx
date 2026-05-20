@@ -1,51 +1,26 @@
-import type { FC } from 'react';
+import { memo, type Dispatch, type FC, type SetStateAction } from 'react';
 
 import TodoItem from '@/components/pages/TodoPage/TodoItem/TodoItem';
-import { useTodoContext } from '@/context/useTodoContext';
 import { useTodoFetch } from '@/hooks/useTodoFetch';
-import type { ITodo } from '@/types/todoType';
+import type { ITodo } from '@/types/todo.type';
 
+import { fakeTodoList } from './fakeTodoList.data';
 import styles from './TodoList.module.scss';
 
-const fakeTodoList: ITodo[] = [
-    {
-        id: Number(crypto.randomUUID()),
-        title: 'дописать реферат',
-        completed: false,
-    },
-    {
-        id: Number(crypto.randomUUID()),
-        title: 'доделать лабы',
-        completed: false,
-    },
-    {
-        id: Number(crypto.randomUUID()),
-        title: "Изучить SSH на Linux'е (управлять с домашней ОС (винды))",
-        completed: false,
-    },
-    {
-        id: Number(crypto.randomUUID()),
-        title: 'анжумания',
-        completed: false,
-    },
-    {
-        id: Number(crypto.randomUUID()),
-        title: 'не забыть',
-        completed: false,
-    },
-    {
-        id: Number(crypto.randomUUID()),
-        title: 'выпрямить спину',
-        completed: false,
-    },
-];
+interface ITodoListProps {
+    todoList: ITodo[];
+    setTodoList: Dispatch<SetStateAction<ITodo[]>>;
+}
 
-const TodoList: FC = () => {
-    const { todoList, setTodoList } = useTodoContext();
+const TodoList: FC<ITodoListProps> = ({ todoList, setTodoList }) => {
     const { loading, error } = useTodoFetch(6);
 
     if (loading) {
-        return <span>Data is loading...</span>;
+        return (
+            <div className={styles.listContainer}>
+                <span>Data is loading...</span>
+            </div>
+        );
     }
 
     if (error) {
@@ -77,4 +52,4 @@ const TodoList: FC = () => {
     );
 };
 
-export default TodoList;
+export default memo(TodoList);

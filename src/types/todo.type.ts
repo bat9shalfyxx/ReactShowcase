@@ -1,6 +1,5 @@
 export interface ITodo {
-    userId?: number;
-    id: number;
+    id: string;
     title: string;
     description?: string;
     completed: boolean;

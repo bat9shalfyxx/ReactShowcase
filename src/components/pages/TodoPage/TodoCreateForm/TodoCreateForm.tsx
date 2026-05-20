@@ -1,24 +1,22 @@
-import { useState, type FC, type FormEvent } from 'react';
+import { memo, useState, type FC, type SubmitEvent } from 'react';
 
 import CustomInput from '@/components/common/CustomInput/CustomInput';
+import { useTodoContext } from '@/context/useTodoContext';
 
 import styles from './TodoCreateForm.module.scss';
 
-interface ITodoCreateForm {
-    onCreateTodo: (title: string, description?: string | undefined) => void;
-}
-
-const TodoCreateForm: FC<ITodoCreateForm> = ({ onCreateTodo }) => {
+const TodoCreateForm: FC = () => {
     const [title, setTitle] = useState<string>('');
-    const [description, setDescription] = useState<string | undefined>(undefined);
+    const [description, setDescription] = useState<string>('');
+    const createTodoItem = useTodoContext().createTodoItem;
 
-    const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+    const submitHandler = (e: SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        onCreateTodo(title, description);
+        createTodoItem(title, description);
 
         setTitle('');
-        setDescription(undefined);
+        setDescription('');
     };
 
     return (
@@ -40,4 +38,4 @@ const TodoCreateForm: FC<ITodoCreateForm> = ({ onCreateTodo }) => {
     );
 };
 
-export default TodoCreateForm;
+export default memo(TodoCreateForm);

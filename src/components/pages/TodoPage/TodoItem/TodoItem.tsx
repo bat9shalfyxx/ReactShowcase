@@ -1,11 +1,11 @@
-import { type FC } from 'react';
+import { memo, type FC } from 'react';
 
 import { useTodoContext } from '@/context/useTodoContext';
 
 import styles from './TodoItem.module.scss';
 
 interface ITodoItem {
-    id: number;
+    id: string;
     title: string;
     completed: boolean;
     index: number;
@@ -32,4 +32,4 @@ const TodoItem: FC<ITodoItem> = ({ id, title, completed, index }) => {
     );
 };
 
-export default TodoItem;
+export default memo(TodoItem);

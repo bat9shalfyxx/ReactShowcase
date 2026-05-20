@@ -3,7 +3,7 @@ import type { AxiosError, AxiosResponse } from 'axios';
 import { useState, useEffect } from 'react';
 
 import { useTodoContext } from '@/context/useTodoContext';
-import type { ITodo } from '@/types/todoType';
+import type { ITodo } from '@/types/todo.type';
 
 interface IUseTodoFetchReturn {
     loading: boolean;
